@@ -48,11 +48,11 @@ Kemudian, sebelum memulai menggunakan Framework Codeigniter kita perlu melakukan
 
 Untuk dapat mengaktifkannya kalian perlu masuk kedalam control panel xampp kemudian pada bagian apache klik Config > ```PHP (php.ini)``` seperti gambar dibawah.
 
-![Screenshot (568)](https://github.com/roswanda11/lab11web/assets/115516632/9d68971b-27a8-43ab-b6ac-e21931b10944)
+![290714233](https://github.com/marifinnnnn/Lab11Web/assets/115518274/616774a8-5ed0-43c8-b550-87b64c15e5fc)
 
 Setelahnya cukup hilangkan tanda ; pada ekstentsi yang akan diaktifkan seperti gambar dibawah. Kemudian simpan kembali file tersebut dan restart Apache web servernya.
 
-![Screenshot (569)](https://github.com/roswanda11/lab11web/assets/115516632/1fdebb0c-eca4-40c5-829a-fe03c4326ec2)
+![290714348](https://github.com/marifinnnnn/Lab11Web/assets/115518274/128465dd-d993-4e2b-997c-d6bbd54992bb)
 
 ## PENGINSTALLAN CODEIGNITER 4
 
@@ -63,7 +63,7 @@ Untuk melakukan instalasi codeigniter 4 dapat dilakukan dengan dua cara , yaitu 
   -  Ubah nama direktory framework-4.x.xx menjadi ci4
   -  Buka browser dengan alamat http://localhost/Lab11Web/lab11_php_ci/ci4/public/
 
-![image](https://github.com/roswanda11/lab11web/assets/115516632/dce6c640-bbbe-40b6-beb6-f5c2a2201a96)
+![290717259](https://github.com/marifinnnnn/Lab11Web/assets/115518274/61242114-8613-408b-8c70-0a2f178f9bfd)
 
 Pilih codeigniter 4 kemudian tekan download dan tunggu hingga terinstall.
 
@@ -71,7 +71,7 @@ Pilih codeigniter 4 kemudian tekan download dan tunggu hingga terinstall.
 
 Codeigniter 4 menyediakan CLI untuk dapat mempermudah proses development. Untuk mengakses CLI bukalah terminal/command prompt. Kemudian arahkan lokasi direktori sesuai dengan direktori kerja project dibuat. (xampp/htdocs/Lab11Web/Lab11_php_ci/ci4)
 
-![Screenshot (572)](https://github.com/roswanda11/lab11web/assets/115516632/fcb87b6e-e614-4c82-89d9-10b684938acc)
+![290746639](https://github.com/marifinnnnn/Lab11Web/assets/115518274/f6eea242-17e4-4441-8913-2084eeb15e59)
 
 Dan masukan perintah dibawah untuk dapat menjalankan guna memanggil CLI Codeigniter.
 
@@ -93,8 +93,6 @@ Selanjutnya hilangkanlah ; pada akhir kode ketika kalian membuka file app/Contro
 
 Dan terjadilah error pada aplikasi yang akan ditampilkan pesan kesalahan seperti berikut.
 
-![menambahkan_gambar](img/TAMPILAN%20ERROR.png)
-
 
 ## PEMBUATAN ROUTE BARU
 
@@ -108,17 +106,14 @@ $routes->get('/faqs', 'Page::faqs');
 
 Kemudian buka CLI dan jalankan perintah tersebut. Jika mendapat tampilan seperti dibawah maka penambahan routes sudah benar.
 
-![menambahkan_gambar](img/CEK%20ROUTES.png)
 
 Selanjutnya cobalah untuk mengakses route yang telah dibuat dengan mengakses alamat URL http://localhost:8080/about
 
-![menambahkan_gambar](img/CEK%20WEB%20ROUTES.png)
 
 Jika mendapat tampilan seperti diatas, maka artinya file atau pages tersebut tidak ada. Dan untuk dapat mengakses halaman tersebut, harus dibuat terlebih dahulu Controller yang sesuai dengan routing yang dibuat yaitu Controller Page.
 
 ## MEMBUAT CONTROLLER
 
-![menambahkan_gambar](img/MEMBUAT%20CONTROLLER.png)
 
 Selanjutnya adalah membuat Controller Page seperti diatas. Buat file baru dengan nama page.php pada direktori Controller kemudian isi kodenya seperti berikut.
 
@@ -154,11 +149,9 @@ $routes->setAutoRoute(true);
 
 Tambahkan method baru pada Controller Page seperti berikut.
 
-![menambahkan_gambar](img/AUTO%20ROUTING.png)
 
 ## MEMBUAT VIEW
 
-![menambahkan_gambar](img/BUAT%20VIEW.png)
 
 Selanjutnya adalah membuat view untuk tampilan web agar lebih menarik seperti diatas dengan membuat file baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi kodenya seperti berikut.
 
@@ -243,7 +236,6 @@ Selanjutnya, ubahlah file about pada app view dengan kode berikut.
 
 Maka ketika halaman web tersebut kalian refresh, kalian akan mendapat tampilan seperti gambar dibawah ini.
 
-![menambahkan_gambar](img/LAYOUT%20WEB.png)
 
 
 # PRAKTIKUM 12
@@ -256,11 +248,9 @@ Kalian bisa langsung saja membuat database pada PHPMyAdmin dengan mengklik tombo
 CREATE DATABASE lab_ci4;
 ```
 
-![menambahkan_gambar](img/DATABASE%2012.png)
 
 ## PEMBUATAN TABEL 
 
-![menambahkan_gambar](img/MEMBUAT%20TABEL%2012.png)
 
 Setelah database berhasil dibuat. Selanjutnya proses pembuatan tabel pada database tersebut. Pembuatannya sama dengan sebelumnya, kalian hanya perlu menekan tombol MySQL pada Database sebelumnya kemudian masukan kode berikut:
 
@@ -278,9 +268,7 @@ CREATE TABLE artikel (
 
 ## KONFIGURASI KONEKSI DATABASE
 
-Konfigurasi dapat dilakukan dengan dua cara. Pertama, pada dua file app/config/database.php atau yang kedua menggunakan file .env seperti yang akan saya gunakan dengan menghapus tanda # pada bagian database seperti dibawah.
-
-![menambahkan_gambar](img/KONFIG%20KONEKSI%2012.png)
+Konfigurasi dapat dilakukan dengan dua cara. Pertama, pada dua file app/config/database.php atau yang kedua menggunakan file .env seperti yang akan saya gunakan dengan menghapus tanda # pada bagian database
 
 ## MEMBUAT MODEL
 
@@ -349,11 +337,10 @@ Buatlah direktori baru dengan nama artikel pada direktori app/views yang kemudia
 <?= $this->include('template/footer'); ?>
 ```
 
-Setelahnya refresh kembali browsernya dan kalian akan mendapatkan tampilan seperti gambar dibawah ini.
+Setelahnya refresh kembali browsernya dan kalian akan mendapatkan tampilan baru
 
-![menambahkan_gambar](img/MEMBUAT%20VIEW%2012.png)
 
-Tampilan diatas menampilkan bahwa belum satupun data yang ditampilkan, jadi cobalah tambahkan beberapa data pada database agar dapat ditampilkan datanya. Berikut kode yang digunakan:
+jadi cobalah tambahkan beberapa data pada database agar dapat ditampilkan datanya. Berikut kode yang digunakan:
 
 ```php
 INSERT INTO artikel (judul, isi, slug) VALUE
@@ -362,9 +349,8 @@ buku contoh huruf.', 'artikel-pertama'), ('Artikel kedua', 'Tidak seperti anggap
 teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih dari 2000 tahun.', 'artikel-kedua');
 ```
 
-Refresh kembali browsernya dan akan menampilkan tampilan seperti ini.
+Refresh kembali browsernya dan akan menampilkan tampilan
 
-![menambahkan_gambar](img/INSERT%20ARTIKEL%2012.png)
 
 ## MEMBUAT TAMPILAN DETAIL ARTIKEL
 
@@ -410,9 +396,8 @@ Bukalah kembali file app/config/Routes.php kemudian tambahkan routing berikut un
 $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 ```
 
-Setelah ditambahkan cek browser dengan URL http://localhost:8080/artikel/artikel-pertama dan inilah hasilnya
+Setelah ditambahkan cek browser dengan URL http://localhost:8080/artikel/artikel-pertama
 
-![menambahkan_gambar](img/ROUTING%2012.png)
 
 ## MEMBUAT MENU ADMIN
 
@@ -489,9 +474,6 @@ $routes->group('admin', function($routes) {
 });
 ```
 
-![menambahkan_gambar](img/ADMIN%2012.png)
-
-Setelah ditambahkan akseslah menu admin untuk dapat melihat hasil seperti diatas dengan menggunakan URL http://localhost:8080/admin/artikel/
 
 
 ## MENAMBAHKAN DATA ARTIKEL
@@ -520,8 +502,6 @@ public function add()
         return view('artikel/form_add', compact('title'));
     }
 ```
-
-![menambahkan_gambar](img/FORM%20ADD%2012.png)
 
 Kemudian buatlah view atau tampilan seperti diatas untuk form tambahan dengan nama form_add.php yang diisi dengan kode berikut.
 
@@ -572,7 +552,6 @@ public function edit($id)
     }
 ```
 
-![menambahkan_gambar](img/UBAH%20DATA%2012.png)
 
 Kemudian buatlah tampilan seperti diatas untuk form tambah dengan nama form_edit.php yang diisi dengan kode berikut.
 
@@ -611,14 +590,10 @@ public function delete($id)
 
 Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan improvisasi.
 
-![menambahkan_gambar](img/ADMIN%2012.png)
-
 
 # PRAKTIKUM 13
 
 ## MEMBUAT TABEL : USER LOGIN
-
-![menambahkan_gambar](img/BUAT%20TABEL%2013.png)
 
 Kalian bisa langsung saja membuat sebuah tabel pada PHPMyAdmin dengan mengklik tombol MySQL yang ada diatas kemudian masukan kode dibawah kemudian klik kirim.
 
@@ -762,7 +737,6 @@ Database ini digunakan untuk membuat data dummy. Untuk mencobanya kita perlu mem
 ```
 php spark make:seeder UserSeeder
 ```
-![menambahkan_gambar](img/DATABASE%20SEEDER%2013.png)
 
 Selanjutnya, bukalah file UserSeeder.php yang berada pada direktori app/Database/Seeds/UserSeeder.php kemudian isi dengan kode berikut ini.
 
@@ -793,9 +767,7 @@ Selanjutnya buka kembali CLI dan ketikan perintah berikut.
 php spark db:seed UserSeeder
 ```
 
-Setelah menambahkan perintah tersebut bukalah browser untuk melakukan pengecekan dengan menggunakan URL http://localhost:8080/user/login seperti inilah tampilan yang dihasilkan.
-
-![menambahkan_gambar](img/COBA%20AKSES%2013.png)
+Setelah menambahkan perintah tersebut bukalah browser untuk melakukan pengecekan dengan menggunakan URL http://localhost:8080/user/login
 
 
 ## MENAMBAHKAN AUTH FILTER
@@ -834,19 +806,18 @@ Selanjutnya bukalah file app/config/Filters.php kemudian tambahkan kode berikut 
 'auth' => App\Filters\Auth::class
 ```
 
-Setelahnya buka file app/Config/Routes.php dan sesuaikanlah kodenya seperti gambar dibawah.
+Setelahnya buka file app/Config/Routes.php dan sesuaikanlah kodenya
 
-![menambahkan_gambar](img/SESUAIKAN%20KODE%2013.png)
 
 ## PERCOBAAN AKSES MENU ADMIN
 
-Bukalah URL dengan alamat http://localhost:8080/user/login dan ketika alamat tersebut diakses maka akan muncul tampilan halaman login seperti berikut.
+Bukalah URL dengan alamat http://localhost:8080/user/login dan ketika alamat tersebut diakses maka akan muncul tampilan halaman login
 
-![menambahkan_gambar](img/COBA%20AKSES%2013.png)
 
-Setelah mendapat tampilan diatas, loginlah menggunakan email adress dan password yang sudah disetting sebelumnya dan inilah tampilan yang dihasilkan ketika kalian sudah berhasil login.
 
-![menambahkan_gambar](img/ADMIN%2012.png)
+loginlah menggunakan email adress dan password yang sudah disetting sebelumnya
+
+
 
 ## FUNGSI LOGOUT
 
@@ -864,7 +835,6 @@ Tambahkanlah method logout pada Controller User seperti berikut:
 
 Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan improvisasi.
 
-![menambahkan_gambar](img/ADMIN%2012.png)
 
 
 # PRAKTIKUM 14 
@@ -898,9 +868,7 @@ Kemudian bukalah file views/artikel/admin_index.php dan tambahkan kode dibawah i
 
 Lalu tambahkanlah data baru dan buka kembalilah menu daftar artikel pada browser untuk melihat hasilnya.
 
-![menambahkan_gambar](img/TAMBAH%20DATA%2014.png)
 
-![menambahkan_gambar](img/PAGINATION%2014.png)
 
 
 ## MEMBUAT PENCARIAN
@@ -938,14 +906,12 @@ Dan ubahlah link pager menjadi seperti ini.
 <?= $pager->only(['q'])->links(); ?>
 ```
 
-Maka seperti inilah tampilan yang dihasilkan.
 
-![menambahkan_gambar](img/CARI%20DATA%2014.png)
 
 
 ## UPLOAD GAMBAR
 
-![menambahkan_gambar](img/MENAMBAHKAN%20GAMBAR%2014.png)
+
 
 Untuk menambahkan fungsi upload gambar pada tambah artikel seperti diatas, bukalah kembali Controller Artikel dan sesuaikan kodenya pada method menjadi add menjadi seperti ini.
 
@@ -995,4 +961,4 @@ Sesuaikan juga tag form dengan menambahkan sebuah ecrypt type seperti berikut.
 Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
 improvisasi.
 
-![menambahkan_gambar](img/FINAL%2014.png)
+                                                                                                          وَعَلَيْكُمْ السَّلاَمُ
